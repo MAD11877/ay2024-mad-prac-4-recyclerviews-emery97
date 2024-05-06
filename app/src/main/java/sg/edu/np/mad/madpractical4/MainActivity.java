@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     final String Title = "Main Activity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(ssavedInstanceState);
+        super.onCreate(savedInstanceState);
         Log.v(Title,"On Create:");
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
