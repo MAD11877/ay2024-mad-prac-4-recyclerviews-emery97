@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
@@ -22,6 +22,36 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_list);
+        ArrayList<User> userList = new ArrayList<User>();
+        String[] nameList = {"Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace", "Henry", "Ivy", "Jack"};
+        String[] descriptionList = {
+                "Business Studies",
+                "Mass Communication",
+                "Film, Sound & Video",
+                "Aerospace Electronics",
+                "Biomedical Engineering",
+                "Business & Social Enterprise",
+                "Chemical & Biomolecular Engineering",
+                "Digital Game Art & Design",
+                "Early Childhood Education",
+                "Financial Informatics",
+                "Health Sciences (Nursing)",
+                "International Business",
+                "Marine & Offshore Technology",
+                "Pharmaceutical Science",
+                "Sustainable Urban Design & Engineering",
+                "Tourism & Resort Management",
+                "Visual Effects",
+                "Nanotechnology & Materials Science",
+                "Robotics & Smart Systems",
+                "User Experience & Test Design"
+        };
+        boolean[] follow = {true,false};
+        Random random = new Random();
+        int randomId = random.nextInt(20) +1;
+        int followChoice = random.nextInt(1);
+        User user = new User(nameList[randomId],descriptionList[randomId],randomId,follow[followChoice]);
+        userList.add(user);
     }
     @Override
     protected void onStart(){
