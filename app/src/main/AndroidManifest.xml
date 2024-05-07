@@ -10,8 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Madpractical4"
+        android:theme="@style/Theme.MadPractical"
         tools:targetApi="31">
+        <activity
+            android:name=".MessageGroup"
+            android:exported="false" />
         <activity
             android:name=".ListActivity"
             android:exported="true">
